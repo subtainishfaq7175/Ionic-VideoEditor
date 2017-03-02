@@ -1,0 +1,17 @@
+.noUi-tooltip {
+  opacity: 0.8
+}
+
+.noUi-horizontal .noUi-handle-upper .noUi-tooltip {
+  bottom: 28px !important;
+  top: -32px !important;
+}
+
+.noUi-connect {
+  background: map-get($colors, primary) !important;
+}
+
+.edit-video ion-segment-button ion-icon {
+  position: relative;
+  top: 2px;
+}

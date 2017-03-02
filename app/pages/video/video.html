@@ -1,0 +1,23 @@
+<ion-navbar *navbar hideBackButton="true">
+  <ion-title>Video Editor</ion-title>
+</ion-navbar>
+
+<ion-content padding class="videos">
+
+  <ion-list>
+    <ion-item (click)="recordVideo()">
+      <ion-icon name="videocam" item-left></ion-icon>
+        Record a video
+    </ion-item>
+    <ion-item (click)="importVideo()">
+      <ion-icon name="film" item-left></ion-icon>
+        Import a video
+    </ion-item>
+    <ion-item hideWhen="android">
+      <ion-icon name="crop" item-left></ion-icon>
+      <ion-label>Crop Video</ion-label>
+      <ion-toggle [(ngModel)]="input.cropVideo" (ngModelChange)="onCropSettingChange()"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

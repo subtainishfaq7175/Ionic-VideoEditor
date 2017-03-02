@@ -1,0 +1,44 @@
+<ion-navbar *navbar hideBackButton="true">
+  <ion-title>Video Result</ion-title>
+  <ion-buttons end>
+    <button (click)="newVideo()">
+       <ion-icon ios="ios-add-circle-outline" md="md-add-circle"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content padding class="video-result">
+
+  <video id="result-video-element"
+    width="100%"
+    controls
+    webkit-playsinline
+    poster="{{thumbnailPath}}"
+    src="{{videoPath}}">
+  </video>
+
+  <div *ngIf="videoInfo">
+    <div class="video-details-header">
+      <strong>Video Details:</strong>
+    </div>
+    <div>
+      <strong>Width:</strong> {{videoInfo.width}}
+    </div>
+    <div>
+      <strong>Height:</strong> {{videoInfo.height}}
+    </div>
+    <div>
+      <strong>Orientation:</strong> {{videoInfo.orientation}}
+    </div>
+    <div>
+      <strong>Duration:</strong> {{videoInfo.duration.toFixed(2)}} seconds
+    </div>
+    <div>
+      <strong>Size:</strong> {{videoInfo.size}} bytes
+    </div>
+    <div>
+      <strong>Bitrate:</strong> {{videoInfo.bitrate}} bits per second
+    </div>
+  </div>
+
+</ion-content>

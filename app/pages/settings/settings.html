@@ -1,0 +1,91 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Settings
+  </ion-title>
+  <ion-buttons end>
+    <button (click)="showOptionInfo()">
+      <ion-icon name="information-circle"></ion-icon>
+    </button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content class="settings">
+  <ion-list>
+
+    <ion-list-header>
+      Video Transcode Settings
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Width</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.width" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Height</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.height" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Bitrate (bits/sec)</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.videoBitrate" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Audio Channels</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.audioChannels" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Audio Sample Rate (bits/sec)</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.audioSampleRate" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Audio Bitrate</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.audioBitrate" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Maintain Aspect Ratio</ion-label>
+      <ion-toggle [(ngModel)]="settings.videoMaintainAspectRatio" (ngModelChange)="onSettingChange()"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Optimize For Network Use</ion-label>
+      <ion-toggle [(ngModel)]="settings.optimizeForNetworkUse" (ngModelChange)="onSettingChange()"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Save To Library</ion-label>
+      <ion-toggle [(ngModel)]="settings.saveToLibrary" (ngModelChange)="onSettingChange()"></ion-toggle>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      Thumbnail Settings
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Width</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.thumbnailWidth" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Height</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.thumbnailHeight" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Quality</ion-label>
+      <ion-input type="number" pattern="\d*" [(ngModel)]="settings.thumbnailQuality" (ngModelChange)="onSettingChange()"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Maintain Aspect Ratio</ion-label>
+      <ion-toggle [(ngModel)]="settings.thumbnailMaintainAspectRatio" (ngModelChange)="onSettingChange()"></ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>

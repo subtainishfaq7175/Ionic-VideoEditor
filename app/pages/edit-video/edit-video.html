@@ -1,0 +1,51 @@
+<ion-navbar *navbar>
+  <ion-title>Edit Video</ion-title>
+
+  <ion-buttons end>
+    <button (click)="performEdit()">Next</button>
+  </ion-buttons>
+</ion-navbar>
+
+<ion-content padding class="edit-video">
+
+  <ion-segment [(ngModel)]="editAction">
+    <ion-segment-button value="trim" (click)="onTrimButtonClick($event)">
+      <ion-icon name="cut"></ion-icon>
+      Trim
+    </ion-segment-button>
+    <ion-segment-button value="cover" (click)="onCoverFrameButtonClick($event)">
+      <ion-icon name="image"></ion-icon>
+      Cover Frame
+    </ion-segment-button>
+  </ion-segment>
+
+
+  <div (click)="onVideoClick($event)" style="margin-top: 5px;">
+    <video id="edit-video-element"
+      width="100%"
+      webkit-playsinline
+      poster="{{thumbnailPath}}"
+      src="{{videoPath}}">
+    </video>
+  </div>
+
+  <!-- can't use ngSwitch here -->
+
+  <div [class.hide]="editAction !== 'trim'">
+    <div style="margin: 2px 15px 9px 15px;">
+      <div id="trim-slider"></div>
+    </div>
+
+    <div *ngIf="videoDuration">
+      Duration: {{videoDuration}} seconds
+    </div>
+  </div>
+
+  <div [class.hide]="editAction !== 'cover'">
+    <div style="margin: 2px 15px 9px 15px;">
+      <div id="cover-frame-slider"></div>
+    </div>
+  </div>
+
+
+</ion-content>
