@@ -13,6 +13,26 @@
       <ion-icon name="film" item-left></ion-icon>
         Import a video
     </ion-item>
+    <ion-item (click)="filters()">
+      <ion-icon name="Filters" item-left></ion-icon>
+      Filters
+    </ion-item>
+    <ion-item (click)="AddText()">
+      <ion-icon name="Add Text" item-left></ion-icon>
+      Add Text
+    </ion-item>
+    <ion-item (click)="MakeVideofromPicture()">
+      <ion-icon name="Import Picture" item-left></ion-icon>
+      Import Picture
+    </ion-item>
+    <ion-item (click)="Add Sound()">
+      <ion-icon name="Sound" item-left></ion-icon>
+      Add Sound
+    </ion-item>
+    <ion-item (click)="Save()">
+      <ion-icon name="Save" item-left></ion-icon>
+      Save File
+    </ion-item>
     <ion-item hideWhen="android">
       <ion-icon name="crop" item-left></ion-icon>
       <ion-label>Crop Video</ion-label>
