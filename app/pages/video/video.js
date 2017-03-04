@@ -4,8 +4,7 @@ import {EditVideoPage} from '../edit-video/edit-video';
 
 
 @Page({
-  templateUrl: 'build/pages/video/video.html'
-})
+  templateUrl: 'build/pages/video/video.html'})
 export class VideoPage {
   static get parameters() {
     return [[NavController]];

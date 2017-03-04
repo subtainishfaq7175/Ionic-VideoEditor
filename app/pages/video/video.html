@@ -1,45 +1,61 @@
 <ion-navbar *navbar hideBackButton="true">
-  <ion-content padding class="bgcolors"></ion-content>
-  <ion-title>Video Editor</ion-title>
-  <ion-content padding class="colors"></ion-content>
+  <ion-title class="color">Video Editor</ion-title>
 </ion-navbar>
 
 <ion-content padding class="videos">
 
-  <ion-list>
-    <ion-item (click)="recordVideo()">
+<!--  <ion-list >
+    <ion-item (click)="recordVideo()" class="bg">
       <ion-icon name="videocam" item-left></ion-icon>
-        Record a video
+      Record a video
     </ion-item>
-    <ion-item (click)="importVideo()">
+    <ion-item (click)="importVideo()" class="bg">
       <ion-icon name="film" item-left></ion-icon>
         Import a video
     </ion-item>
-    <ion-item >
-      <ion-icon name="color-wand" item-left></ion-icon>
-      Filters
+    <ion-item class="bg" >
+      <ion-icon name="color-wand" item-left > </ion-icon>
+     Filters
     </ion-item>
-    <ion-item>
+    <ion-item class="bg">
       <ion-icon name="create" item-left></ion-icon>
       Add Text
     </ion-item>
-    <ion-item>
+    <ion-item class="bg">
       <ion-icon name="image" item-left></ion-icon>
       Import Picture
     </ion-item>
-    <ion-item>
+    <ion-item class="bg">
       <ion-icon name="musical-notes" item-left></ion-icon>
       Add Sound
     </ion-item>
-    <ion-item >
+    <ion-item class="bg">
       <ion-icon name="arrow-down" item-left></ion-icon>
       Save File
     </ion-item>
-    <ion-item hideWhen="android">
+    <ion-item >-->
+      <button class="button-ios-rounded button-ios-1 " >
+
+      </button>
+      <button class="button-ios-rounded" class="button-ios-2">
+
+      </button>
+      <button class="button-ios-rounded" class="button-ios-3">
+
+      </button>
+  <button class="button-ios-rounded" class="button-ios-4">
+
+  </button>
+  <button class="button-ios-rounded" class="button-ios-5">
+
+  </button>
+
+  <!--  </ion-item>
+    <ion-item hideWhen="android" class="bg">
       <ion-icon name="crop" item-left></ion-icon>
       <ion-label>Crop Video</ion-label>
       <ion-toggle [(ngModel)]="input.cropVideo" (ngModelChange)="onCropSettingChange()"></ion-toggle>
     </ion-item>
   </ion-list>
-
+-->
 </ion-content>
